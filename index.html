@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#0b0710" />
   <meta name="description" content="내 몸 속 봉인된 최악의 마룡 — 아르카디움 제국 마법 아카데미와 절대악 아바돈의 계약 이야기" />
   <title>내 몸 속 봉인된 최악의 마룡</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260912-2255" />
+  <script src="script.js?v=20260912-2255" defer></script>
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -86,36 +86,12 @@
         <p>카드를 눌러 인물 정보를 확인할 수 있다.</p>
       </div>
       <div class="character-grid">
-        <button class="character-card reveal" data-character="lucia" style="--accent:#c64358">
-          <span class="character-art art-lucia" aria-hidden="true"></span>
-          <span class="character-overlay"></span>
-          <span class="character-meta"><small>4 CIRCLE · MAGIC SWORD</small><strong>루시아 카르테인</strong></span>
-        </button>
-        <button class="character-card reveal" data-character="rena" style="--accent:#e86b2f">
-          <span class="character-art art-rena" aria-hidden="true"></span>
-          <span class="character-overlay"></span>
-          <span class="character-meta"><small>4 CIRCLE · EXPLOSION FLAME</small><strong>레나 바르칸</strong></span>
-        </button>
-        <button class="character-card reveal" data-character="ria" style="--accent:#d8c66a">
-          <span class="character-art art-ria" aria-hidden="true"></span>
-          <span class="character-overlay"></span>
-          <span class="character-meta"><small>3 CIRCLE · HOLY LIGHT</small><strong>리아 에버하트</strong></span>
-        </button>
-        <button class="character-card reveal" data-character="ciel" style="--accent:#8454d8">
-          <span class="character-art art-ciel" aria-hidden="true"></span>
-          <span class="character-overlay"></span>
-          <span class="character-meta"><small>5 CIRCLE · MAGIC FIGHT</small><strong>시엘 라베른</strong></span>
-        </button>
-        <button class="character-card reveal" data-character="serena" style="--accent:#f09cb8">
-          <span class="character-art art-serena" aria-hidden="true"></span>
-          <span class="character-overlay"></span>
-          <span class="character-meta"><small>6 CIRCLE · GARDEN OF BARRIERS</small><strong>세레나 아르벨</strong></span>
-        </button>
-        <button class="character-card reveal" data-character="isera" style="--accent:#4b8bd6">
-          <span class="character-art art-isera" aria-hidden="true"></span>
-          <span class="character-overlay"></span>
-          <span class="character-meta"><small>8 CIRCLE · CLOCK DOMAIN</small><strong>이세라 벤하르트</strong></span>
-        </button>
+        <button class="character-card reveal" data-character="lucia" style="--accent:#c64358"><span class="character-art art-lucia" aria-hidden="true"></span><span class="character-overlay"></span><span class="character-meta"><small>4 CIRCLE · MAGIC SWORD</small><strong>루시아 카르테인</strong></span></button>
+        <button class="character-card reveal" data-character="rena" style="--accent:#e86b2f"><span class="character-art art-rena" aria-hidden="true"></span><span class="character-overlay"></span><span class="character-meta"><small>4 CIRCLE · EXPLOSION FLAME</small><strong>레나 바르칸</strong></span></button>
+        <button class="character-card reveal" data-character="ria" style="--accent:#d8c66a"><span class="character-art art-ria" aria-hidden="true"></span><span class="character-overlay"></span><span class="character-meta"><small>3 CIRCLE · HOLY LIGHT</small><strong>리아 에버하트</strong></span></button>
+        <button class="character-card reveal" data-character="ciel" style="--accent:#8454d8"><span class="character-art art-ciel" aria-hidden="true"></span><span class="character-overlay"></span><span class="character-meta"><small>5 CIRCLE · MAGIC FIGHT</small><strong>시엘 라베른</strong></span></button>
+        <button class="character-card reveal" data-character="serena" style="--accent:#f09cb8"><span class="character-art art-serena" aria-hidden="true"></span><span class="character-overlay"></span><span class="character-meta"><small>6 CIRCLE · GARDEN OF BARRIERS</small><strong>세레나 아르벨</strong></span></button>
+        <button class="character-card reveal" data-character="isera" style="--accent:#4b8bd6"><span class="character-art art-isera" aria-hidden="true"></span><span class="character-overlay"></span><span class="character-meta"><small>8 CIRCLE · CLOCK DOMAIN</small><strong>이세라 벤하르트</strong></span></button>
       </div>
     </section>
 
@@ -129,7 +105,6 @@
           </div>
           <button class="abaddon-portrait form-dragon" id="abaddonPortrait" type="button" aria-label="아바돈 이미지 전환">
             <span class="abaddon-symbol">ABSOLUTE<br />EVIL</span>
-            <span class="abaddon-eyes" aria-hidden="true"></span>
             <span class="portrait-label">CLICK TO TRANSFORM</span>
           </button>
         </div>
@@ -157,20 +132,14 @@
         <p class="eyebrow">BODY CONTROL CONTRACT</p>
         <h2>힘을 빌리는 대가는<br />몸의 주도권이다.</h2>
       </div>
-
       <div class="contract-console reveal">
-        <div class="host-preview" aria-label="아바돈이 플레이어의 몸을 장악한 상태를 표현한 비주얼">
-          <div class="host-shadow"></div>
-          <div class="host-horns"></div>
-          <div class="host-eye"></div>
+        <div class="host-preview" aria-label="아바돈이 플레이어의 몸을 장악하는 연출">
           <span>HOST CONTROLLED</span>
         </div>
-
         <div class="contract-ui">
           <div class="control-row"><span>BODY OWNER</span><strong>{{user}}</strong></div>
           <div class="control-divider"><span id="controlDot"></span></div>
           <div class="control-row evil"><span>ABSOLUTE EVIL</span><strong>ABADDON</strong></div>
-
           <div class="timer-panel">
             <small>BODY USE TIME</small>
             <strong id="contractTimer">00:60</strong>
@@ -181,7 +150,6 @@
             </div>
             <button class="btn btn-danger" id="contractStart" type="button">계약 데모 실행</button>
           </div>
-
           <ul class="contract-rules">
             <li>계약 시간이 끝나기 전까지 몸을 강제로 되찾을 수 없다.</li>
             <li>{{user}}는 의식과 외부 시야를 유지하며 내부에서 말할 수 있다.</li>
@@ -210,10 +178,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>《내 몸 속 봉인된 최악의 마룡》</span>
-    <a href="#top">BACK TO TOP ↑</a>
-  </footer>
+  <footer class="site-footer"><span>《내 몸 속 봉인된 최악의 마룡》</span><a href="#top">BACK TO TOP ↑</a></footer>
 
   <dialog class="character-modal" id="characterModal">
     <button class="modal-close" type="button" aria-label="닫기">×</button>
