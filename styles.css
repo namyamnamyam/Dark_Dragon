@@ -1,19 +1,27 @@
-@import url('styles-base.css?v=20260912-2210');
+@import url('styles-base.css?v=20260912-2230');
 
 /* Real PNG assets. Keep overlays translucent so the image itself remains visible. */
-.art-lucia{background-image:linear-gradient(160deg,transparent 35%,rgba(122,20,41,.58)),url('assets/images/lucia.png?v=20260912-2210')}
-.art-rena{background-image:linear-gradient(160deg,transparent 35%,rgba(189,61,21,.52)),url('assets/images/rena.png?v=20260912-2210')}
-.art-ria{background-image:linear-gradient(160deg,transparent 35%,rgba(147,133,55,.42)),url('assets/images/ria.png?v=20260912-2210')}
-.art-ciel{background-image:linear-gradient(160deg,transparent 35%,rgba(88,48,150,.52)),url('assets/images/ciel.png?v=20260912-2210')}
-.art-serena{background-image:linear-gradient(160deg,transparent 35%,rgba(189,89,123,.48)),url('assets/images/serena.png?v=20260912-2210')}
-.art-isera{background-image:linear-gradient(160deg,transparent 35%,rgba(42,95,157,.5)),url('assets/images/isera.png?v=20260912-2210')}
+.art-lucia{background-image:linear-gradient(160deg,transparent 35%,rgba(122,20,41,.58)),url('assets/images/lucia.png?v=20260912-2230')}
+.art-rena{background-image:linear-gradient(160deg,transparent 35%,rgba(189,61,21,.52)),url('assets/images/rena.png?v=20260912-2230')}
+.art-ria{background-image:linear-gradient(160deg,transparent 35%,rgba(147,133,55,.42)),url('assets/images/ria.png?v=20260912-2230')}
+.art-ciel{background-image:linear-gradient(160deg,transparent 35%,rgba(88,48,150,.52)),url('assets/images/ciel.png?v=20260912-2230')}
+.art-serena{background-image:linear-gradient(160deg,transparent 35%,rgba(189,89,123,.48)),url('assets/images/serena.png?v=20260912-2230')}
+.art-isera{background-image:linear-gradient(160deg,transparent 35%,rgba(42,95,157,.5)),url('assets/images/isera.png?v=20260912-2230')}
 
-.form-dragon{background-image:linear-gradient(180deg,rgba(7,6,8,.04),rgba(4,3,6,.42)),url('assets/images/abaddon-dragon.png?v=20260912-2210')}
-.form-polymorph{background-image:linear-gradient(180deg,rgba(7,6,8,.03),rgba(4,3,6,.42)),url('assets/images/abaddon-polymorph.png?v=20260912-2210')}
+.form-dragon{background-image:linear-gradient(180deg,rgba(7,6,8,.04),rgba(4,3,6,.42)),url('assets/images/abaddon-dragon.png?v=20260912-2230')}
+.form-polymorph{background-image:linear-gradient(180deg,rgba(7,6,8,.03),rgba(4,3,6,.42)),url('assets/images/abaddon-polymorph.png?v=20260912-2230')}
 
-/* Main visual now uses the actual Abaddon dragon artwork. */
-.hero-visual{background-image:linear-gradient(180deg,rgba(10,7,14,.06),rgba(8,5,12,.34)),url('assets/images/abaddon-dragon.png?v=20260912-2210');background-size:cover;background-position:center;}
+/* Main visual uses the actual Abaddon dragon artwork. */
+.hero-visual{background-image:linear-gradient(180deg,rgba(10,7,14,.06),rgba(8,5,12,.34)),url('assets/images/abaddon-dragon.png?v=20260912-2230');background-size:cover;background-position:center;}
 .hero-visual .academy-window,.hero-visual .dragon-eye,.hero-visual .hero-sigil{display:none}
 
-/* {{user}} appearance remains intentionally undefined. */
-.host-preview{background-image:linear-gradient(180deg,rgba(10,8,12,.14),rgba(5,4,7,.9)),radial-gradient(circle at 50% 28%,rgba(102,255,146,.09),transparent 13%),radial-gradient(circle at 50% 42%,#281934 0 18%,#09070c 58%)}
+/* Contract host: normal ↔ Abaddon possession crossfade. */
+.host-preview{position:relative;background:none;isolation:isolate}
+.host-preview::before,.host-preview::after{content:"";position:absolute;inset:0;background-size:cover;background-position:center;border-radius:inherit;transition:opacity .95s ease,transform 1.05s cubic-bezier(.22,.61,.36,1),filter .95s ease;pointer-events:none}
+.host-preview::before{z-index:0;background-image:linear-gradient(180deg,rgba(8,6,10,.02),rgba(5,4,7,.32)),url('assets/images/host_normal.webp?v=20260912-2230');opacity:1;transform:scale(1)}
+.host-preview::after{z-index:1;background-image:linear-gradient(180deg,rgba(15,7,20,.02),rgba(5,2,9,.22)),url('assets/images/host_abaddon.webp?v=20260912-2230');opacity:0;transform:scale(1.018);filter:saturate(.92)}
+.contract-running .host-preview::before{opacity:.03;transform:scale(1.012);filter:brightness(.82)}
+.contract-running .host-preview::after{opacity:1;transform:scale(1);filter:saturate(1.08)}
+.host-preview .host-shadow,.host-preview .host-horns,.host-preview .host-eye{display:none}
+.host-preview>span{z-index:3;opacity:0;transition:opacity .4s ease,color .4s ease;text-shadow:0 2px 14px rgba(0,0,0,.85)}
+.contract-running .host-preview>span{opacity:1;color:#d3b7ef}
