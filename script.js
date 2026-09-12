@@ -122,6 +122,7 @@ portrait?.addEventListener('click', () => setAbaddonForm(abaddonForm === 'dragon
 
 let selectedTime = 60;
 let timerHandle = null;
+const TIMER_SPEED = 6;
 const timerDisplay = document.getElementById('contractTimer');
 const contractStart = document.getElementById('contractStart');
 const contractConsole = document.querySelector('.contract-console');
@@ -160,7 +161,7 @@ contractStart?.addEventListener('click', () => {
       contractStart.removeAttribute('disabled');
       timerDisplay.textContent = formatTime(selectedTime);
     }
-  }, 1000);
+  }, 1000 / TIMER_SPEED);
 });
 
 // Crack 작품 URL이 정해지면 아래 빈 문자열에 주소만 넣으면 됩니다.
