@@ -1,12 +1,12 @@
 @import url('styles-base.css');
 
-/* Image path fixes: uploaded files are PNG assets. */
-.art-lucia{background-image:linear-gradient(160deg,transparent 35%,rgba(122,20,41,.78)),radial-gradient(circle at 50% 32%,#5f2639 0 12%,#1a1017 42%,#070609 75%),url('assets/images/lucia.png')}
-.art-rena{background-image:linear-gradient(160deg,transparent 35%,rgba(189,61,21,.72)),radial-gradient(circle at 48% 33%,#913921 0 12%,#22110b 43%,#070609 75%),url('assets/images/rena.png')}
-.art-ria{background-image:linear-gradient(160deg,transparent 35%,rgba(147,133,55,.55)),radial-gradient(circle at 48% 31%,#83975d 0 10%,#1a2113 44%,#070609 75%),url('assets/images/ria.png')}
-.art-ciel{background-image:linear-gradient(160deg,transparent 35%,rgba(88,48,150,.72)),radial-gradient(circle at 50% 31%,#4e3b75 0 11%,#16101f 44%,#070609 75%),url('assets/images/ciel.png')}
-.art-serena{background-image:linear-gradient(160deg,transparent 35%,rgba(189,89,123,.65)),radial-gradient(circle at 50% 31%,#a66d87 0 11%,#22151e 44%,#070609 75%),url('assets/images/serena.png')}
-.art-isera{background-image:linear-gradient(160deg,transparent 35%,rgba(42,95,157,.7)),radial-gradient(circle at 50% 31%,#476b9c 0 11%,#101826 44%,#070609 75%),url('assets/images/isera.png')}
-.form-dragon{background-image:linear-gradient(180deg,rgba(7,6,8,.1),rgba(4,3,6,.75)),radial-gradient(circle at 50% 29%,rgba(104,247,144,.12),transparent 10%),radial-gradient(circle at 52% 36%,#2d1842 0 18%,#0d0911 56%),url('assets/images/abaddon-dragon.png')}
-.form-polymorph{background-image:linear-gradient(180deg,rgba(7,6,8,.06),rgba(4,3,6,.75)),radial-gradient(circle at 50% 30%,rgba(105,236,143,.15),transparent 11%),radial-gradient(circle at 52% 34%,#48265d 0 18%,#0d0911 56%),url('assets/images/abaddon-polymorph.png')}
+/* PNG image assets + cache-busting for GitHub Pages. */
+.art-lucia{background-image:linear-gradient(160deg,transparent 35%,rgba(122,20,41,.78)),radial-gradient(circle at 50% 32%,#5f2639 0 12%,#1a1017 42%,#070609 75%),url('assets/images/lucia.png?v=20260912-2202')}
+.art-rena{background-image:linear-gradient(160deg,transparent 35%,rgba(189,61,21,.72)),radial-gradient(circle at 48% 33%,#913921 0 12%,#22110b 43%,#070609 75%),url('assets/images/rena.png?v=20260912-2202')}
+.art-ria{background-image:linear-gradient(160deg,transparent 35%,rgba(147,133,55,.55)),radial-gradient(circle at 48% 31%,#83975d 0 10%,#1a2113 44%,#070609 75%),url('assets/images/ria.png?v=20260912-2202')}
+.art-ciel{background-image:linear-gradient(160deg,transparent 35%,rgba(88,48,150,.72)),radial-gradient(circle at 50% 31%,#4e3b75 0 11%,#16101f 44%,#070609 75%),url('assets/images/ciel.png?v=20260912-2202')}
+.art-serena{background-image:linear-gradient(160deg,transparent 35%,rgba(189,89,123,.65)),radial-gradient(circle at 50% 31%,#a66d87 0 11%,#22151e 44%,#070609 75%),url('assets/images/serena.png?v=20260912-2202')}
+.art-isera{background-image:linear-gradient(160deg,transparent 35%,rgba(42,95,157,.7)),radial-gradient(circle at 50% 31%,#476b9c 0 11%,#101826 44%,#070609 75%),url('assets/images/isera.png?v=20260912-2202')}
+.form-dragon{background-image:linear-gradient(180deg,rgba(7,6,8,.1),rgba(4,3,6,.75)),radial-gradient(circle at 50% 29%,rgba(104,247,144,.12),transparent 10%),radial-gradient(circle at 52% 36%,#2d1842 0 18%,#0d0911 56%),url('assets/images/abaddon-dragon.png?v=20260912-2202')}
+.form-polymorph{background-image:linear-gradient(180deg,rgba(7,6,8,.06),rgba(4,3,6,.75)),radial-gradient(circle at 50% 30%,rgba(105,236,143,.15),transparent 11%),radial-gradient(circle at 52% 34%,#48265d 0 18%,#0d0911 56%),url('assets/images/abaddon-polymorph.png?v=20260912-2202')}
 .host-preview{background-image:linear-gradient(180deg,rgba(10,8,12,.14),rgba(5,4,7,.9)),radial-gradient(circle at 50% 28%,rgba(102,255,146,.09),transparent 13%),radial-gradient(circle at 50% 42%,#281934 0 18%,#09070c 58%)}
