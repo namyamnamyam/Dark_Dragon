@@ -164,21 +164,12 @@ contractStart?.addEventListener('click', () => {
   }, 1000 / TIMER_SPEED);
 });
 
-// Crack 작품 URL이 정해지면 아래 빈 문자열에 주소만 넣으면 됩니다.
 const CRACK_STORY_URL = '';
 const crackLink = document.getElementById('crackLink');
-const linkNote = document.getElementById('linkNote');
 if (CRACK_STORY_URL) {
   crackLink.href = CRACK_STORY_URL;
   crackLink.target = '_blank';
   crackLink.rel = 'noopener noreferrer';
-  linkNote.hidden = true;
 } else {
-  crackLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    linkNote.animate([
-      { opacity: .35, transform: 'translateY(4px)' },
-      { opacity: 1, transform: 'translateY(0)' }
-    ], { duration: 350, easing: 'ease-out' });
-  });
+  crackLink?.addEventListener('click', (event) => event.preventDefault());
 }
